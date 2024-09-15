@@ -43,6 +43,27 @@ class Book {
       updatedAt: this.updatedAt,
     };
   }
+
+  getBookById() {
+    return {
+      id: this.id,
+      name: this.name,
+      publisher: this.publisher,
+    };
+  }
+
+  updateBook(data) {
+    this.name = data.name;
+    this.year = data.year;
+    this.author = data.author;
+    this.summary = data.summary;
+    this.publisher = data.publisher;
+    this.pageCount = data.pageCount;
+    this.readPage = data.readPage;
+    this.finished = data.finished;
+    this.reading = data.reading;
+    this.updatedAt = data.updatedAt;
+  }
 }
 
 export default Book;
